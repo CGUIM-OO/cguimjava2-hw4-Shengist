@@ -80,6 +80,11 @@ class Deck{
 			int j = rnd.nextInt(cards.size());
 			nUsedCard.add(j,openCard.get(i));
 		}
+		for(int i = 0; i < cards.size(); i++) {
+			int j = rnd.nextInt(cards.size());
+			Card tempCard = cards.get(j);
+			cards.set(i, tempCard);
+		}
 		usedCard.clear();
 		openCard.clear();
 		nUsed = 0;
